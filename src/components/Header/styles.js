@@ -11,7 +11,7 @@ export const Container = styled.header`
     text-decoration: none;
     color: #fff;
     transition: opacity 0.2s;
-    h1 {
+    > h1 {
       letter-spacing: 8px;
     }
     &:hover {
