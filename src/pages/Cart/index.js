@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   MdRemoveCircleOutline,
@@ -11,6 +11,11 @@ import * as CartActions from '../../redux/modules/cart/actions';
 import { formatPrice } from '../../util/format';
 
 export default function Cart() {
+  useEffect(() => {
+    window.document.getElementsByClassName('logo')[0].textContent =
+      'Carrinho de compras';
+  }, []);
+
   const total = useSelector(state =>
     formatPrice(
       state.cart.reduce((totalSum, product) => {

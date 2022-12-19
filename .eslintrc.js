@@ -30,5 +30,7 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'no-unused-vars': 'off',
     'react-lint/too-many-states': 'error',
+    'react-lint/large-useeffect': 'error',
+    'react-lint/no-dom-manipulation': 'error',
   },
 };

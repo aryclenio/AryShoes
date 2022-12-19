@@ -24,6 +24,7 @@ export default function Home() {
 
   // utilizando dispach do redux em um componente funcional
   const dispatch = useDispatch();
+
   useEffect(() => {
     async function loadProducts() {
       const response = await api.get('products');

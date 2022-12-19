@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <Container>
       <Link to="/">
-        <h1>
+        <h1 className="logo">
           RocketShoes
           <FaShoePrints color="#fff" size={30} />
         </h1>
