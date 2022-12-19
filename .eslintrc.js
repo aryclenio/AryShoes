@@ -9,6 +9,7 @@ module.exports = {
     __DEV__: 'readonly',
   },
   parser: 'babel-eslint',
+
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -16,7 +17,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['react', 'prettier', 'react-hooks'],
+  plugins: ['react', 'prettier', 'react-hooks', 'react-lint'],
   rules: {
     'react/jsx-filename-extension': [
       'warn',
@@ -25,9 +26,9 @@ module.exports = {
       },
     ],
     'import/prefer-default-export': 'off',
-    'no-param-reassign': off,
     'no-console': ['error', { allow: ['tron'] }],
     'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exaustive-deps': 'warn',
+    'no-unused-vars': 'off',
+    'react-lint/too-many-states': 'error',
   },
 };

@@ -11,7 +11,7 @@ export default function Header() {
     <Container>
       <Link to="/">
         <h1>
-          ARY_SHOES
+          RocketShoes
           <FaShoePrints color="#fff" size={30} />
         </h1>
       </Link>
