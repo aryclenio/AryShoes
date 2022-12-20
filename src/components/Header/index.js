@@ -8,7 +8,7 @@ import { Container, Cart } from './styles';
 export default function Header() {
   const cartSize = useSelector(state => state.cart.length);
   return (
-    <Container>
+    <div>
       <Link to="/">
         <h1 className="logo">
           RocketShoes
@@ -23,6 +23,6 @@ export default function Header() {
         </div>
         <MdShoppingBasket size={36} color="#fff" />
       </Cart>
-    </Container>
+    </div>
   );
 }

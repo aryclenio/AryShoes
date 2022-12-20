@@ -4839,10 +4839,10 @@ eslint-plugin-react-hooks@^1.6.1, eslint-plugin-react-hooks@^1.7.0:
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-1.7.0.tgz#6210b6d5a37205f0b92858f895a4e827020a7d04"
   integrity sha512-iXTCFcOmlWvw4+TOE8CLWj6yX1GwzT0Y6cUfHHZqWnSk144VmVIRcVGtUAzrLES7C798lmvnt02C7rxaOX1HNA==
 
-eslint-plugin-react-lint@^0.1.3:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react-lint/-/eslint-plugin-react-lint-0.1.3.tgz#9c7aafd4d4955e6a852109878334dd8c9666fbbf"
-  integrity sha512-p7kwrGnRhdzY5D6hxOLqDBujpoPxHe9PhE7FLVzDNdBhITSBs/Fb+DxedVXdalSR5dfWG0oou09W7LFmiDn2Dg==
+eslint-plugin-react-lint@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react-lint/-/eslint-plugin-react-lint-0.1.5.tgz#64f9b62cf3c50e12e890441641006e9dbfc493f5"
+  integrity sha512-nVQutIdGslphTHFUZ9xCMq9gnpr+63QwQT29sbI1vAZg4xqMhBiet6zUwSO8dic5+Onn9A/Jbol5dXekVaLZrA==
   dependencies:
     requireindex "^1.2.0"
 

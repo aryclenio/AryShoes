@@ -32,5 +32,8 @@ module.exports = {
     'react-lint/too-many-states': 'error',
     'react-lint/large-useeffect': 'error',
     'react-lint/no-dom-manipulation': 'error',
+    'react-lint/no-missing-key': 'error',
+    'react-lint/too-many-props': 'error',
+    'react-lint/unnecessary-wrapper': 'error',
   },
 };
