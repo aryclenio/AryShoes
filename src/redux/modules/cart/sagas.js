@@ -1,10 +1,10 @@
-import api from '../../../services/api';
 import { call, select, put, all, takeLatest } from 'redux-saga/effects';
+import { toast } from 'react-toastify';
+import api from '../../../services/api';
 import { addToCartSuccess, updateAmountSuccess } from './actions';
 import { formatPrice } from '../../../util/format';
-import { toast } from 'react-toastify';
 import history from '../../../services/history';
-//GENERATOR - Se assemelha a async await
+// GENERATOR - Se assemelha a async await
 function* addToCart({ id }) {
   const productExists = yield select(state =>
     state.cart.find(p => p.id === id)
@@ -47,8 +47,8 @@ function* updateAmount({ id, amount }) {
 }
 
 export default all([
-  //previne que o usuario clique varias vezes no evento
-  //toma somente o ultimo evento
+  // previne que o usuario clique varias vezes no evento
+  // toma somente o ultimo evento
   takeLatest('@cart/ADD_REQUEST', addToCart),
   takeLatest('@cart/UPDATE_AMOUNT_REQUEST', updateAmount),
 ]);

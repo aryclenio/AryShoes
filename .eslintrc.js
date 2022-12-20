@@ -8,7 +8,6 @@ module.exports = {
     SharedArrayBuffer: 'readonly',
     __DEV__: 'readonly',
   },
-  parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -25,9 +24,8 @@ module.exports = {
       },
     ],
     'import/prefer-default-export': 'off',
-    'no-param-reassign': off,
+    'no-param-reassign': 'off',
     'no-console': ['error', { allow: ['tron'] }],
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exaustive-deps': 'warn',
+    'jsx-a11y/control-has-associated-label': 'off',
   },
 };

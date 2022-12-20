@@ -8,7 +8,7 @@ import * as CartActions from '../../redux/modules/cart/actions';
 
 export default function Home() {
   const [products, setProducts] = useState([]);
-  //utilizando redux com o hooks, sem o connect
+  // utilizando redux com o hooks, sem o connect
   const amount = useSelector(state =>
     state.cart.reduce((sumAmount, product) => {
       sumAmount[product.id] = product.amount;
@@ -16,7 +16,7 @@ export default function Home() {
     }, {})
   );
 
-  //utilizando dispach do redux em um componente funcional
+  // utilizando dispach do redux em um componente funcional
   const dispatch = useDispatch();
   useEffect(() => {
     async function loadProducts() {
@@ -30,7 +30,7 @@ export default function Home() {
     }
     loadProducts();
   }, []);
-  //O array vazio é necessário para que useEfect execute apenas uma vez
+  // O array vazio é necessário para que useEfect execute apenas uma vez
 
   function handleAddProduct(id) {
     dispatch(CartActions.addToCartRequest(id));
@@ -56,5 +56,5 @@ export default function Home() {
   );
 }
 
-//Serve para mapear as actions de forma que elas possam
-//ser acessadas como propriedades do componente
+// Serve para mapear as actions de forma que elas possam
+// ser acessadas como propriedades do componente
