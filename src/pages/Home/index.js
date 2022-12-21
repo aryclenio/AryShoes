@@ -1,10 +1,11 @@
+/* eslint-disable react/jsx-no-bind */
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { MdAddShoppingCart } from 'react-icons/md';
 import { ProductList } from './styles';
 import api from '../../services/api';
 import { formatPrice } from '../../util/format';
 import * as CartActions from '../../redux/modules/cart/actions';
+import Product from '../../components/Product';
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -39,18 +40,15 @@ export default function Home() {
   return (
     <ProductList>
       {products.map(product => (
-        <li key={product.id}>
-          <img src={product.image} alt={product.title} />
-          <strong>{product.title}</strong>
-          <span>{product.priceFormated}</span>
-          <button type="button" onClick={() => handleAddProduct(product.id)}>
-            <div>
-              <MdAddShoppingCart size={16} color="#fff" />{' '}
-              {amount[product.id] || 0}
-            </div>
-            <span>ADICIONAR AO CARRINHO</span>
-          </button>
-        </li>
+        <Product
+          image={product.image}
+          title={product.title}
+          priceFormated={product.priceFormated}
+          key={product.id}
+          product={product}
+          handleAddProduct={handleAddProduct}
+          amount={amount}
+        />
       ))}
     </ProductList>
   );
