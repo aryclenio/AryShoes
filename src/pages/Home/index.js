@@ -9,6 +9,7 @@ import Product from '../../components/Product';
 
 export default function Home() {
   const [products, setProducts] = useState([]);
+  const [dolarPrices, setDolarPrices] = useState([]);
   // utilizando redux com o hooks, sem o connect
   const amount = useSelector(state =>
     state.cart.reduce((sumAmount, product) => {
@@ -28,6 +29,10 @@ export default function Home() {
         priceFormated: formatPrice(product.price),
       }));
       setProducts(data);
+
+      const prices = [];
+      data.map(product => prices.push(Math.round(product.price / 5.2)));
+      setDolarPrices(prices);
     }
     loadProducts();
   }, []);
@@ -44,6 +49,7 @@ export default function Home() {
           image={product.image}
           title={product.title}
           priceFormated={product.priceFormated}
+          dolarPrice={dolarPrices[product.id]}
           key={product.id}
           product={product}
           handleAddProduct={handleAddProduct}

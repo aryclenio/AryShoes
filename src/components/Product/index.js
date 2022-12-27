@@ -9,12 +9,14 @@ export default function Product({
   priceFormated,
   handleAddProduct,
   amount,
+  dolarPrice,
 }) {
   return (
     <li key={id}>
       <img src={image} alt={title} />
       <strong>{title}</strong>
       <span>{priceFormated}</span>
+      <span>{`USD ${dolarPrice}`}</span>
       <button type="button" onClick={() => handleAddProduct(id)}>
         <div>
           <MdAddShoppingCart size={16} color="#fff" /> {amount[id] || 0}
