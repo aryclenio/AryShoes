@@ -30,7 +30,7 @@ export default function Home() {
       setProducts(data);
     }
     loadProducts();
-  }, []);
+  }, [setProducts]);
   // O array vazio é necessário para que useEfect execute apenas uma vez
 
   function handleAddProduct(id) {
